@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainFragment">
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="USSD Uzbekistan"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="#039BE5"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/companies"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#039BE5"
+        app:layout_constraintHeight_percent=".85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="25dp"
+            android:layout_marginBottom="-25dp">
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/beeline"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintRight_toLeftOf="@id/ucell"
+            app:layout_constraintBottom_toTopOf="@id/mobiuz"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/beeline"
+                android:background="#FFC91E"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ucell"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@id/beeline"
+            app:layout_constraintBottom_toTopOf="@id/uzmobile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/ucell"
+                android:background="#511C70"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mobiuz"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            android:layout_marginEnd="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/beeline"
+            app:layout_constraintRight_toLeftOf="@id/uzmobile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/mobiuz"
+                android:background="#E43641"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/uzmobile"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintLeft_toRightOf="@id/mobiuz"
+            app:layout_constraintTop_toBottomOf="@id/ucell"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/uzmobile"
+                android:background="#01ABFB"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
